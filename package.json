@@ -48,8 +48,8 @@
     "src/"
   ],
   "dependencies": {
-    "@types/mapbox-gl": "^2.7.21",
-    "mapbox-gl": "^3.1.2",
+      "@types/mapbox-gl": "^2.7.21",
+      "mapbox-gl": "git+ssh://git@github.com:austinhlopez/mapbox-gl-js.git#20241223/mapbox-pm-vector-extension",      
     "pmtiles": "^3.0.3"
   },
   "jsdelivr": "dist/mapbox-pmtiles.umd.js"
