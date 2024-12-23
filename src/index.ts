@@ -4,6 +4,9 @@ import { PMTiles, Protocol, TileType } from "pmtiles";
 
 // @ts-expect-error
 const VectorTileSourceImpl: Class<VectorTileSource> = mapboxgl.Style.getSourceType<VectorTileSource>("vector");
+console.warn("double checking VectorTileSourceImpl")
+console.warn("it is possible that getSourceType does not return correctly>")
+console.lwarn(VectorTileSourceImpl);
 
 export const SOURCE_TYPE = "pmtile-source";
 /**
@@ -186,7 +189,9 @@ type TileID = {
  *     
  * ```
  */
-export class PmTilesSource extends VectorTileSourceImpl {
+
+/* trying vector tile source... */
+export class PmTilesSource extends VectorTileSource {
     [x: string]: any;
     static SOURCE_TYPE = SOURCE_TYPE
 

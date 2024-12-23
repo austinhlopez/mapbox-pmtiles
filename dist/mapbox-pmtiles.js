@@ -1,4 +1,4 @@
-import mapboxgl from "mapbox-gl";
+import mapboxgl, { VectorTileSource } from "mapbox-gl";
 var __pow = Math.pow;
 var __async = (__this, __arguments, generator) => {
   return new Promise((resolve, reject) => {
@@ -1369,6 +1369,9 @@ var PMTiles = class {
   }
 };
 const VectorTileSourceImpl = mapboxgl.Style.getSourceType("vector");
+console.warn("double checking VectorTileSourceImpl");
+console.warn("it is possible that getSourceType does not return correctly>");
+console.lwarn(VectorTileSourceImpl);
 const SOURCE_TYPE = "pmtile-source";
 const extend = (dest, ...sources) => {
   for (const src of sources) {
@@ -1423,7 +1426,7 @@ class ErrorEvent extends Event {
     super("error", extend({ error }, data));
   }
 }
-const _PmTilesSource = class _PmTilesSource extends VectorTileSourceImpl {
+const _PmTilesSource = class _PmTilesSource extends VectorTileSource {
   /**
    * The PmTiles source. It mainly should work as a regular source as other mapbox sources.
    * @public
